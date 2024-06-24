@@ -1,14 +1,12 @@
 import { Input } from "@nextui-org/react";
+import Contacts from "./component/Contacts";
+import { data } from "@/data/fake";
 
 export default function Home() {
   return (
     <main className="p-12">
-      Hi Next.js project!
-      <div className="flex flex-col gap-4 w-1/4">
-        <label htmlFor="name">Name</label>
-        <input id="name" />
-
-        <Input type="email" label="Email" />
+      <div className="flex flex-col gap-4">
+        <Contacts contacts={data} />
       </div>
     </main>
   );
