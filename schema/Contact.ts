@@ -1,4 +1,4 @@
-import { Document, model, Schema } from "mongoose";
+import { Document, model, models, Schema } from "mongoose";
 
 export interface IContact extends Document {
   name: string;
@@ -16,6 +16,6 @@ const contactSchema: Schema = new Schema({
   description: { type: String },
 });
 
-const Contact = model<IContact>("Contact", contactSchema);
+const Contact = models.Contact || model<IContact>("Contact", contactSchema);
 
 export default Contact;
