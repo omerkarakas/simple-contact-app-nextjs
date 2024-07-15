@@ -1,5 +1,5 @@
 import { Input } from "@nextui-org/react";
-import Contacts from "./component/Contacts";
+import Contacts from "../component/Contacts";
 import { data } from "@/data/fake";
 
 export default function Home() {
